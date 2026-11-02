@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practical — PracticalHub</title>
+  <meta name="description" content="Read, search, copy and download an original machine learning practical notebook.">
+  <meta name="theme-color" content="#0a0e14">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try{if(localStorage.getItem('ph:quick-mode')==='1')document.documentElement.dataset.quick='1';}catch(e){}</script>
+</head>
+<body class="page-practical">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg aria-hidden="true" class="svg-sprite">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M4 20h16"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"></path></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16"></path><path d="m14 6 6 6-6 6"></path></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4"></path><path d="m10 6-6 6 6 6"></path></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5"></path><path d="M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M7 14h10v7H7z"></path></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12"></path><path d="m18 6-12 12"></path></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"></path><path d="M4 5.5v16"></path></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5"></path><path d="m16 7 5 5-5 5"></path><path d="m14 4-4 16"></path></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"></rect><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M7 13h.01M11 13h.01M15 13h.01M18 13h.01M7 16h10"></path></symbol>
+    <symbol id="i-zip" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5z"></path><path d="M15 3v4h4"></path><path d="M10 7h2M10 10h2M10 13h2M10 16h2"></path></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.2"></path></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.2 6.1L20 12l-5.8 2.9L12 21l-2.2-6.1L4 12l5.8-2.9z"></path></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="icon-btn menu-toggle" type="button" id="menu-toggle" aria-label="Open practical navigation" aria-controls="sidebar" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+
+      <a class="brand" href="index.html" aria-label="PracticalHub home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span class="brand-text">Practical<span>Hub</span></span>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <button class="nav-link nav-link-button" type="button" data-open-shortcuts>
+          <svg class="icon" aria-hidden="true"><use href="#i-keyboard"></use></svg>
+          Shortcuts
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger" type="button" data-search-open aria-label="Search all practicals">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          <span class="search-trigger-text">Search practicals</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="quick-toggle" type="button" data-quick-toggle aria-pressed="false" title="Toggle Quick Mode (Q)">
+          <span class="quick-toggle-track" aria-hidden="true"><span class="quick-toggle-thumb"></span></span>
+          <span class="quick-toggle-label">Quick Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Practical navigation">
+        <div class="sidebar-inner">
+          <div class="sidebar-head">
+            <span>Practicals</span>
+            <button class="icon-btn sidebar-close" type="button" id="sidebar-close" aria-label="Close practical navigation">
+              <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+            </button>
+          </div>
+          <nav class="practical-nav" id="practical-nav" aria-label="All practicals"></nav>
+
+          <div class="sidebar-divider"></div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-heading">On this page</div>
+            <nav class="toc" id="toc" aria-label="On this page"></nav>
+          </div>
+
+          <div class="sidebar-divider"></div>
+
+          <div class="sidebar-section sidebar-actions">
+            <a class="sidebar-link" href="index.html">
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+              Back to dashboard
+            </a>
+            <button class="sidebar-link" type="button" data-open-shortcuts>
+              <svg class="icon" aria-hidden="true"><use href="#i-keyboard"></use></svg>
+              Keyboard shortcuts
+            </button>
+          </div>
+        </div>
+      </aside>
+      <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+
+      <article class="practical-page" id="practical-content" aria-busy="true">
+        <div class="loading-state">
+          <div class="loading-spinner" aria-hidden="true"></div>
+          <p>Loading practical…</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>PracticalHub</strong> · Original notebook content is reproduced faithfully. Additional study notes are clearly labelled.</p>
+      <div class="footer-actions">
+        <a class="footer-link" href="index.html">Dashboard</a>
+        <button class="footer-link" type="button" data-open-shortcuts>Keyboard shortcuts</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search-modal" id="search-modal" hidden>
+    <div class="search-backdrop" data-search-close></div>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+      <h2 class="sr-only" id="search-title">Search all practicals</h2>
+      <div class="search-input-wrap">
+        <svg class="icon icon-lg search-input-icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input class="search-input" id="search-input" type="search" placeholder="Search code, function names, concepts, variables…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-controls="search-results" aria-describedby="search-help">
+        <button class="icon-btn search-close" type="button" data-search-close aria-label="Close search">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+      <div class="search-meta">
+        <span id="search-status">Type to search across all practicals</span>
+        <span id="search-count"></span>
+      </div>
+      <div class="search-results" id="search-results" role="listbox" aria-label="Search results"></div>
+      <div class="search-footer" id="search-help">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+        <span><kbd>Enter</kbd> open</span>
+        <span><kbd>Esc</kbd> clear / close</span>
+        <span class="search-footer-spacer"></span>
+        <span>Fuzzy search · 10 notebooks</span>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="dialog" id="shortcuts-dialog" aria-labelledby="shortcuts-title">
+    <div class="dialog-head">
+      <div>
+        <div class="section-kicker">Reference</div>
+        <h2 id="shortcuts-title">Keyboard shortcuts</h2>
+      </div>
+      <button class="icon-btn" type="button" data-close-shortcuts aria-label="Close shortcuts">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <dl class="shortcut-list">
+      <div><dt><kbd>/</kbd> or <kbd>Ctrl</kbd><kbd>K</kbd></dt><dd>Focus global search</dd></div>
+      <div><dt><kbd>↑</kbd><kbd>↓</kbd></dt><dd>Move through search results</dd></div>
+      <div><dt><kbd>Enter</kbd></dt><dd>Open the selected result</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>Clear search, then close the overlay</dd></div>
+      <div><dt><kbd>Q</kbd></dt><dd>Toggle Quick Mode</dd></div>
+      <div><dt><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd></dt><dd>Copy all code on this page</dd></div>
+      <div><dt><kbd>Alt</kbd><kbd>←</kbd> / <kbd>Alt</kbd><kbd>→</kbd></dt><dd>Previous / next practical</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>Open this shortcut panel</dd></div>
+    </dl>
+    <p class="dialog-note">Shortcuts are ignored while typing in a text field, except Ctrl + K and Esc.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js" defer></script>
+  <script src="js/utils.js" defer></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/practical.js" defer></script>
+</body>
+</html>
