@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PracticalHub — Searchable ML practical reference</title>
   <meta name="description" content="Search code, concepts and outputs across 10 machine learning practical notebooks. Copy code instantly and download the original notebooks unchanged.">
-  <meta name="theme-color" content="#0a0e14">
+  <meta name="theme-color" content="#0d1117">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <script>try{if(localStorage.getItem('ph:quick-mode')==='1')document.documentElement.dataset.quick='1';}catch(e){}</script>
@@ -35,7 +35,7 @@
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="PracticalHub home">
         <span class="brand-mark" aria-hidden="true">PH</span>
-        <span class="brand-text">Practical<span>Hub</span></span>
+        <span class="brand-text">Practical<strong>Hub</strong></span>
       </a>
 
       <nav class="header-nav" aria-label="Primary navigation">
@@ -49,7 +49,7 @@
       <div class="header-actions">
         <button class="search-trigger" type="button" data-search-open aria-label="Search all practicals">
           <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
-          <span class="search-trigger-text">Search practicals</span>
+          <span class="search-trigger-text">Search</span>
           <kbd>/</kbd>
         </button>
 
@@ -63,40 +63,40 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Personal ML practical reference</p>
-        <h1 id="hero-title">Every practical.<br><span class="gradient-text">Seconds away.</span></h1>
-        <p class="hero-sub">Search code, concepts, function names and outputs across all 10 notebooks. Copy what you need instantly, or download the original files untouched.</p>
+        <div class="hero-top-row">
+          <div>
+            <h1 id="hero-title">Machine Learning Practicals</h1>
+            <p class="hero-sub">Lab code reference, cell search, exact copies &amp; original notebooks for exams and practicals.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-secondary" type="button" data-download-all>
+              <svg class="icon" aria-hidden="true"><use href="#i-zip"></use></svg>
+              <span>Download ZIP</span>
+            </button>
+          </div>
+        </div>
 
         <div class="hero-search-row">
           <button class="hero-search" type="button" data-search-open>
-            <svg class="icon icon-lg" aria-hidden="true"><use href="#i-search"></use></svg>
-            <span class="hero-search-text">Search <strong>10 practicals</strong> — code, functions, concepts…</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <span class="hero-search-text">Search code, models, metrics, imports…</span>
             <span class="hero-search-keys"><kbd>Ctrl</kbd><kbd>K</kbd></span>
-          </button>
-          <button class="btn btn-primary btn-lg" type="button" data-download-all>
-            <svg class="icon" aria-hidden="true"><use href="#i-zip"></use></svg>
-            <span>Download all</span>
           </button>
         </div>
 
         <div class="hero-stats" aria-label="Portal statistics">
           <div class="stat">
+            <span class="stat-label">Practicals:</span>
             <strong id="stat-practicals">10</strong>
-            <span>practicals</span>
           </div>
           <div class="stat">
+            <span class="stat-label">Code Cells:</span>
             <strong id="stat-code-cells">—</strong>
-            <span>code cells</span>
           </div>
           <div class="stat">
+            <span class="stat-label">Status:</span>
             <strong id="stat-completed">0 / 10</strong>
-            <span>completed</span>
-          </div>
-          <div class="stat stat-hint">
-            <strong>Ctrl K</strong>
-            <span>to search</span>
           </div>
         </div>
       </div>
@@ -105,15 +105,13 @@
     <section class="dashboard-section progress-section" aria-labelledby="progress-heading">
       <div class="progress-card">
         <div class="progress-copy">
-          <div class="section-kicker">Exam prep</div>
-          <h2 id="progress-heading">Your progress</h2>
+          <h2 id="progress-heading">Practical Checklist</h2>
           <p id="progress-label">0 of 10 practicals completed</p>
         </div>
         <div class="progress-track-wrap">
           <div class="progress-track" role="progressbar" aria-labelledby="progress-heading" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress-track">
             <div class="progress-fill" id="progress-fill"></div>
           </div>
-          <div class="progress-scale"><span>0</span><span>5</span><span>10</span></div>
         </div>
         <button class="btn btn-ghost btn-sm" type="button" data-open-shortcuts>
           <svg class="icon" aria-hidden="true"><use href="#i-keyboard"></use></svg>
@@ -124,10 +122,7 @@
 
     <section class="dashboard-section recent-section" id="recent-section" aria-labelledby="recent-heading">
       <div class="section-head">
-        <div>
-          <div class="section-kicker">Pick up where you left off</div>
-          <h2 id="recent-heading">Recently opened</h2>
-        </div>
+        <h2 id="recent-heading">Recently Opened</h2>
       </div>
       <div class="recent-list" id="recent-list">
         <p class="empty-inline">No recent practicals yet. Open one from the list below and it will appear here.</p>
@@ -136,10 +131,7 @@
 
     <section class="dashboard-section" id="practicals" aria-labelledby="practicals-heading">
       <div class="section-head">
-        <div>
-          <div class="section-kicker">All notebooks</div>
-          <h2 id="practicals-heading">Practicals</h2>
-        </div>
+        <h2 id="practicals-heading">All Practicals</h2>
         <p class="section-meta" id="practical-count-label">10 practicals</p>
       </div>
 
@@ -159,10 +151,10 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p><strong>PracticalHub</strong> · 10 original notebooks, indexed for fast recall. Static site, no backend.</p>
+      <p><strong>PracticalHub</strong> · ML Lab reference &amp; code runner helper</p>
       <div class="footer-actions">
-        <button class="footer-link" type="button" data-open-shortcuts>Keyboard shortcuts</button>
-        <button class="footer-link" type="button" data-download-all>Download all notebooks</button>
+        <button class="footer-link" type="button" data-open-shortcuts>Shortcuts</button>
+        <button class="footer-link" type="button" data-download-all>Download all (ZIP)</button>
       </div>
     </div>
   </footer>
